@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E75B5FBE1906B07400815FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FBD1906B07400815FA1 /* Foundation.framework */; };
+		E75B5FC01906B07400815FA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FBF1906B07400815FA1 /* CoreGraphics.framework */; };
+		E75B5FC21906B07400815FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FC11906B07400815FA1 /* UIKit.framework */; };
+		E75B5FC81906B07400815FA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FC61906B07400815FA1 /* InfoPlist.strings */; };
+		E75B5FCA1906B07400815FA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FC91906B07400815FA1 /* main.m */; };
+		E75B5FCE1906B07400815FA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FCD1906B07400815FA1 /* AppDelegate.m */; };
+		E75B5FD11906B07400815FA1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FCF1906B07400815FA1 /* Main_iPhone.storyboard */; };
+		E75B5FD71906B07400815FA1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FD61906B07400815FA1 /* MasterViewController.m */; };
+		E75B5FDA1906B07400815FA1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FD91906B07400815FA1 /* DetailViewController.m */; };
+		E75B5FDC1906B07400815FA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FDB1906B07400815FA1 /* Images.xcassets */; };
+		E75B5FE31906B07400815FA1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FE21906B07400815FA1 /* XCTest.framework */; };
+		E75B5FE41906B07400815FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FBD1906B07400815FA1 /* Foundation.framework */; };
+		E75B5FE51906B07400815FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FC11906B07400815FA1 /* UIKit.framework */; };
+		E75B5FED1906B07400815FA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FEB1906B07400815FA1 /* InfoPlist.strings */; };
+		E75B5FEF1906B07400815FA1 /* turnierCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FEE1906B07400815FA1 /* turnierCalcTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E75B5FE61906B07400815FA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E75B5FB21906B07400815FA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E75B5FB91906B07400815FA1;
+			remoteInfo = turnierCalc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E75B5FBA1906B07400815FA1 /* turnierCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turnierCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E75B5FBD1906B07400815FA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E75B5FBF1906B07400815FA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E75B5FC11906B07400815FA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E75B5FC51906B07400815FA1 /* turnierCalc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "turnierCalc-Info.plist"; sourceTree = "<group>"; };
+		E75B5FC71906B07400815FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E75B5FC91906B07400815FA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E75B5FCB1906B07400815FA1 /* turnierCalc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "turnierCalc-Prefix.pch"; sourceTree = "<group>"; };
+		E75B5FCC1906B07400815FA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E75B5FCD1906B07400815FA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E75B5FD01906B07400815FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		E75B5FD51906B07400815FA1 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		E75B5FD61906B07400815FA1 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		E75B5FD81906B07400815FA1 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E75B5FD91906B07400815FA1 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E75B5FDB1906B07400815FA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E75B5FE11906B07400815FA1 /* turnierCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = turnierCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E75B5FE21906B07400815FA1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E75B5FEA1906B07400815FA1 /* turnierCalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "turnierCalcTests-Info.plist"; sourceTree = "<group>"; };
+		E75B5FEC1906B07400815FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E75B5FEE1906B07400815FA1 /* turnierCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = turnierCalcTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E75B5FB71906B07400815FA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75B5FC01906B07400815FA1 /* CoreGraphics.framework in Frameworks */,
+				E75B5FC21906B07400815FA1 /* UIKit.framework in Frameworks */,
+				E75B5FBE1906B07400815FA1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E75B5FDE1906B07400815FA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75B5FE31906B07400815FA1 /* XCTest.framework in Frameworks */,
+				E75B5FE51906B07400815FA1 /* UIKit.framework in Frameworks */,
+				E75B5FE41906B07400815FA1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E75B5FB11906B07400815FA1 = {
+			isa = PBXGroup;
+			children = (
+				E75B5FC31906B07400815FA1 /* turnierCalc */,
+				E75B5FE81906B07400815FA1 /* turnierCalcTests */,
+				E75B5FBC1906B07400815FA1 /* Frameworks */,
+				E75B5FBB1906B07400815FA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E75B5FBB1906B07400815FA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E75B5FBA1906B07400815FA1 /* turnierCalc.app */,
+				E75B5FE11906B07400815FA1 /* turnierCalcTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E75B5FBC1906B07400815FA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E75B5FBD1906B07400815FA1 /* Foundation.framework */,
+				E75B5FBF1906B07400815FA1 /* CoreGraphics.framework */,
+				E75B5FC11906B07400815FA1 /* UIKit.framework */,
+				E75B5FE21906B07400815FA1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E75B5FC31906B07400815FA1 /* turnierCalc */ = {
+			isa = PBXGroup;
+			children = (
+				E75B5FCC1906B07400815FA1 /* AppDelegate.h */,
+				E75B5FCD1906B07400815FA1 /* AppDelegate.m */,
+				E75B5FCF1906B07400815FA1 /* Main_iPhone.storyboard */,
+				E75B5FD51906B07400815FA1 /* MasterViewController.h */,
+				E75B5FD61906B07400815FA1 /* MasterViewController.m */,
+				E75B5FD81906B07400815FA1 /* DetailViewController.h */,
+				E75B5FD91906B07400815FA1 /* DetailViewController.m */,
+				E75B5FDB1906B07400815FA1 /* Images.xcassets */,
+				E75B5FC41906B07400815FA1 /* Supporting Files */,
+			);
+			path = turnierCalc;
+			sourceTree = "<group>";
+		};
+		E75B5FC41906B07400815FA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E75B5FC51906B07400815FA1 /* turnierCalc-Info.plist */,
+				E75B5FC61906B07400815FA1 /* InfoPlist.strings */,
+				E75B5FC91906B07400815FA1 /* main.m */,
+				E75B5FCB1906B07400815FA1 /* turnierCalc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E75B5FE81906B07400815FA1 /* turnierCalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				E75B5FEE1906B07400815FA1 /* turnierCalcTests.m */,
+				E75B5FE91906B07400815FA1 /* Supporting Files */,
+			);
+			path = turnierCalcTests;
+			sourceTree = "<group>";
+		};
+		E75B5FE91906B07400815FA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E75B5FEA1906B07400815FA1 /* turnierCalcTests-Info.plist */,
+				E75B5FEB1906B07400815FA1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E75B5FB91906B07400815FA1 /* turnierCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E75B5FF21906B07400815FA1 /* Build configuration list for PBXNativeTarget "turnierCalc" */;
+			buildPhases = (
+				E75B5FB61906B07400815FA1 /* Sources */,
+				E75B5FB71906B07400815FA1 /* Frameworks */,
+				E75B5FB81906B07400815FA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = turnierCalc;
+			productName = turnierCalc;
+			productReference = E75B5FBA1906B07400815FA1 /* turnierCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E75B5FE01906B07400815FA1 /* turnierCalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E75B5FF51906B07400815FA1 /* Build configuration list for PBXNativeTarget "turnierCalcTests" */;
+			buildPhases = (
+				E75B5FDD1906B07400815FA1 /* Sources */,
+				E75B5FDE1906B07400815FA1 /* Frameworks */,
+				E75B5FDF1906B07400815FA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E75B5FE71906B07400815FA1 /* PBXTargetDependency */,
+			);
+			name = turnierCalcTests;
+			productName = turnierCalcTests;
+			productReference = E75B5FE11906B07400815FA1 /* turnierCalcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E75B5FB21906B07400815FA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Daniel Schmidt";
+				TargetAttributes = {
+					E75B5FE01906B07400815FA1 = {
+						TestTargetID = E75B5FB91906B07400815FA1;
+					};
+				};
+			};
+			buildConfigurationList = E75B5FB51906B07400815FA1 /* Build configuration list for PBXProject "turnierCalc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E75B5FB11906B07400815FA1;
+			productRefGroup = E75B5FBB1906B07400815FA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E75B5FB91906B07400815FA1 /* turnierCalc */,
+				E75B5FE01906B07400815FA1 /* turnierCalcTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E75B5FB81906B07400815FA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75B5FDC1906B07400815FA1 /* Images.xcassets in Resources */,
+				E75B5FD11906B07400815FA1 /* Main_iPhone.storyboard in Resources */,
+				E75B5FC81906B07400815FA1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E75B5FDF1906B07400815FA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75B5FED1906B07400815FA1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E75B5FB61906B07400815FA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75B5FCE1906B07400815FA1 /* AppDelegate.m in Sources */,
+				E75B5FD71906B07400815FA1 /* MasterViewController.m in Sources */,
+				E75B5FCA1906B07400815FA1 /* main.m in Sources */,
+				E75B5FDA1906B07400815FA1 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E75B5FDD1906B07400815FA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75B5FEF1906B07400815FA1 /* turnierCalcTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E75B5FE71906B07400815FA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E75B5FB91906B07400815FA1 /* turnierCalc */;
+			targetProxy = E75B5FE61906B07400815FA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E75B5FC61906B07400815FA1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E75B5FC71906B07400815FA1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E75B5FCF1906B07400815FA1 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E75B5FD01906B07400815FA1 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		E75B5FEB1906B07400815FA1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E75B5FEC1906B07400815FA1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E75B5FF01906B07400815FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E75B5FF11906B07400815FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E75B5FF31906B07400815FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "turnierCalc/turnierCalc-Prefix.pch";
+				INFOPLIST_FILE = "turnierCalc/turnierCalc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E75B5FF41906B07400815FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "turnierCalc/turnierCalc-Prefix.pch";
+				INFOPLIST_FILE = "turnierCalc/turnierCalc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E75B5FF61906B07400815FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/turnierCalc.app/turnierCalc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "turnierCalc/turnierCalc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "turnierCalcTests/turnierCalcTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E75B5FF71906B07400815FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/turnierCalc.app/turnierCalc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "turnierCalc/turnierCalc-Prefix.pch";
+				INFOPLIST_FILE = "turnierCalcTests/turnierCalcTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E75B5FB51906B07400815FA1 /* Build configuration list for PBXProject "turnierCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E75B5FF01906B07400815FA1 /* Debug */,
+				E75B5FF11906B07400815FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E75B5FF21906B07400815FA1 /* Build configuration list for PBXNativeTarget "turnierCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E75B5FF31906B07400815FA1 /* Debug */,
+				E75B5FF41906B07400815FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E75B5FF51906B07400815FA1 /* Build configuration list for PBXNativeTarget "turnierCalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E75B5FF61906B07400815FA1 /* Debug */,
+				E75B5FF71906B07400815FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E75B5FB21906B07400815FA1 /* Project object */;
+}
