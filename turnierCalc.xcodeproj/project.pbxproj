@@ -21,6 +21,7 @@
 		E75B5FE51906B07400815FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FC11906B07400815FA1 /* UIKit.framework */; };
 		E75B5FED1906B07400815FA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FEB1906B07400815FA1 /* InfoPlist.strings */; };
 		E75B5FEF1906B07400815FA1 /* turnierCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FEE1906B07400815FA1 /* turnierCalcTests.m */; };
+		E75B5FFA1906C82D00815FA1 /* Couple.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FF91906C82D00815FA1 /* Couple.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		E75B5FEA1906B07400815FA1 /* turnierCalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "turnierCalcTests-Info.plist"; sourceTree = "<group>"; };
 		E75B5FEC1906B07400815FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E75B5FEE1906B07400815FA1 /* turnierCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = turnierCalcTests.m; sourceTree = "<group>"; };
+		E75B5FF81906C82D00815FA1 /* Couple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Couple.h; sourceTree = "<group>"; };
+		E75B5FF91906C82D00815FA1 /* Couple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Couple.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				E75B5FD61906B07400815FA1 /* MasterViewController.m */,
 				E75B5FDB1906B07400815FA1 /* Images.xcassets */,
 				E75B5FC41906B07400815FA1 /* Supporting Files */,
+				E75B5FF81906C82D00815FA1 /* Couple.h */,
+				E75B5FF91906C82D00815FA1 /* Couple.m */,
 			);
 			path = turnierCalc;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				E75B5FCE1906B07400815FA1 /* AppDelegate.m in Sources */,
 				E75B5FD71906B07400815FA1 /* MasterViewController.m in Sources */,
 				E75B5FCA1906B07400815FA1 /* main.m in Sources */,
+				E75B5FFA1906C82D00815FA1 /* Couple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "MasterViewController.h"
+#import "Couple.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -54,12 +55,12 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    NSString *newObject = [[alertView textFieldAtIndex:0] text];
+    NSString *name = [[alertView textFieldAtIndex:0] text];
+    Couple * newObject = [Couple initWithName:name];
     [_objects insertObject:newObject atIndex:[_objects count]];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
     
-    //NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
@@ -80,8 +81,8 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    Couple *object = _objects[indexPath.row];
+    cell.textLabel.text = [object name];
     return cell;
 }
 
