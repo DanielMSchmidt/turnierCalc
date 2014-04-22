@@ -9,11 +9,6 @@
 #import "MasterViewController.h"
 #import "Couple.h"
 
-@interface MasterViewController () {
-    NSMutableArray *_objects;
-}
-@end
-
 @implementation MasterViewController
 
 - (void)awakeFromNib

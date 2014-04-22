@@ -10,9 +10,8 @@
 
 @interface Couple : NSObject
 
-@property (strong, nonatomic) NSString * name;
-@property (strong, nonatomic) NSMutableArray * ratings;
-@property (nonatomic) NSUInteger * judges;
+@property (weak, nonatomic) NSString * name;
+@property (weak, nonatomic) NSMutableArray * ratings;
 
 + (Couple *)initWithName:(NSString*)name;
 
