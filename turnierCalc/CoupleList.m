@@ -25,6 +25,7 @@
     if(self = [super init])
     {
         _couples = [[NSMutableArray alloc] init];
+        _position = 0;
     }
     return self;
 }
@@ -34,19 +35,34 @@
     [_couples insertObject:couple atIndex:[_couples count]];
 }
 
-- (NSInteger)count
+- (NSInteger) count
 {
     return [_couples count];
 }
 
-- (Couple *)getCoupleAtIndex:(NSInteger)index
+- (Couple *) getCoupleAtIndex:(NSInteger)index
 {
     return _couples[index];
 }
 
-- (void)removeCoupleAtIndex:(NSInteger)index
+- (void) removeCoupleAtIndex:(NSInteger)index
 {
     [_couples removeObjectAtIndex:index];
+}
+
+- (void) addRating:(Rating *)rating
+{
+    Couple *c  = _couples[_position];
+    [c addRating:rating];
+
+    _position = (_position + 1) % [self count];
+}
+
+- (void) resetRatings
+{
+    for (Couple  * couple in _couples) {
+        [couple resetRating];
+    }
 }
 
 @end

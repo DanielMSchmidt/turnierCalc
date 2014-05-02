@@ -11,6 +11,5 @@
 @interface RatingsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *ratingsTextField;
 @property (weak, nonatomic) IBOutlet UILabel *resultsLabel;
-@property (nonatomic) NSUInteger position;
 
 @end

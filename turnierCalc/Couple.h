@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Rating.h"
 
 @interface Couple : NSObject
 
@@ -15,4 +16,7 @@
 
 + (Couple *)initWithName:(NSString*)name;
 
+- (void) addRating:(Rating *)rating;
+- (NSIndexSet *)getPlace;
+- (void) resetRating;
 @end

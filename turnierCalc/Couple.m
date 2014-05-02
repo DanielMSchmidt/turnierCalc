@@ -1,4 +1,4 @@
-//
+    //
 //  Couple.m
 //  turnierCalc
 //
@@ -24,9 +24,14 @@
     [_ratings addObject:rating];
 }
 
-- (NSIndexSet *) getPlace
+- (NSIndexSet *)getPlace
 {
     return [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(1,2)];
+}
+
+- (void) resetRating
+{
+    _ratings = [[NSMutableArray alloc] init];
 }
 
 @end

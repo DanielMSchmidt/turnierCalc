@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Couple.h"
+#import "Rating.h"
 
 @interface CoupleList : NSObject
 @property (strong, nonatomic) NSMutableArray *couples;
+@property (nonatomic) NSInteger position;
 
 + (CoupleList *) getInstance;
 
@@ -18,4 +20,6 @@
 - (NSInteger) count;
 - (Couple *) getCoupleAtIndex:(NSInteger)index;
 - (void) removeCoupleAtIndex:(NSInteger)index;
+- (void) addRating:(Rating *)rating;
+- (void) resetRatings;
 @end

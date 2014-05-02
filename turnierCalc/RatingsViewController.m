@@ -31,7 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [_resultsLabel setText:@""];
-    _position = 0;
+;
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,7 +45,7 @@
 
     // TODO: Add a rating
     Rating * rating = [Rating initWithValue:[_ratingsTextField text]];
-    
+    [[CoupleList getInstance] addRating:rating];
     
     // TODO: Recalculate result
     [self resetDesign];
@@ -59,7 +59,7 @@
 - (IBAction)resetRatings:(id)sender {
     NSLog(@"Reset");
     [self resetDesign];
-    // TODO: Reset the ratings
+    [[CoupleList getInstance] resetRatings];
 }
 
 /*
