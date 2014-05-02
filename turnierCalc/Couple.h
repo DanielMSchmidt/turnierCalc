@@ -11,7 +11,7 @@
 @interface Couple : NSObject
 
 @property (weak, nonatomic) NSString * name;
-@property (weak, nonatomic) NSMutableArray * ratings;
+@property (strong, nonatomic) NSMutableArray * ratings;
 
 + (Couple *)initWithName:(NSString*)name;
 

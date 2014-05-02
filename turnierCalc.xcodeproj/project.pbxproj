@@ -22,7 +22,9 @@
 		E75B5FED1906B07400815FA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FEB1906B07400815FA1 /* InfoPlist.strings */; };
 		E75B5FEF1906B07400815FA1 /* turnierCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FEE1906B07400815FA1 /* turnierCalcTests.m */; };
 		E75B5FFA1906C82D00815FA1 /* Couple.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FF91906C82D00815FA1 /* Couple.m */; };
+		E79E551019123B160046F07D /* Rating.m in Sources */ = {isa = PBXBuildFile; fileRef = E79E550F19123B160046F07D /* Rating.m */; };
 		E7C34F241906DB9300D98F14 /* RatingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C34F231906DB9300D98F14 /* RatingsViewController.m */; };
+		E7D3EB4F1913F279009B6E3F /* CoupleList.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D3EB4E1913F279009B6E3F /* CoupleList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +59,12 @@
 		E75B5FEE1906B07400815FA1 /* turnierCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = turnierCalcTests.m; sourceTree = "<group>"; };
 		E75B5FF81906C82D00815FA1 /* Couple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Couple.h; sourceTree = "<group>"; };
 		E75B5FF91906C82D00815FA1 /* Couple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Couple.m; sourceTree = "<group>"; };
+		E79E550E19123B160046F07D /* Rating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rating.h; sourceTree = "<group>"; };
+		E79E550F19123B160046F07D /* Rating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rating.m; sourceTree = "<group>"; };
 		E7C34F221906DB9300D98F14 /* RatingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingsViewController.h; sourceTree = "<group>"; };
 		E7C34F231906DB9300D98F14 /* RatingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingsViewController.m; sourceTree = "<group>"; };
+		E7D3EB4D1913F279009B6E3F /* CoupleList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoupleList.h; sourceTree = "<group>"; };
+		E7D3EB4E1913F279009B6E3F /* CoupleList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoupleList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +133,12 @@
 				E75B5FC41906B07400815FA1 /* Supporting Files */,
 				E75B5FF81906C82D00815FA1 /* Couple.h */,
 				E75B5FF91906C82D00815FA1 /* Couple.m */,
+				E79E550E19123B160046F07D /* Rating.h */,
+				E79E550F19123B160046F07D /* Rating.m */,
 				E7C34F221906DB9300D98F14 /* RatingsViewController.h */,
 				E7C34F231906DB9300D98F14 /* RatingsViewController.m */,
+				E7D3EB4D1913F279009B6E3F /* CoupleList.h */,
+				E7D3EB4E1913F279009B6E3F /* CoupleList.m */,
 			);
 			path = turnierCalc;
 			sourceTree = "<group>";
@@ -259,8 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79E551019123B160046F07D /* Rating.m in Sources */,
 				E75B5FCE1906B07400815FA1 /* AppDelegate.m in Sources */,
 				E7C34F241906DB9300D98F14 /* RatingsViewController.m in Sources */,
+				E7D3EB4F1913F279009B6E3F /* CoupleList.m in Sources */,
 				E75B5FD71906B07400815FA1 /* MasterViewController.m in Sources */,
 				E75B5FCA1906B07400815FA1 /* main.m in Sources */,
 				E75B5FFA1906C82D00815FA1 /* Couple.m in Sources */,

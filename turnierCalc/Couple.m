@@ -7,6 +7,7 @@
 //
 
 #import "Couple.h"
+#import "Rating.h"
 
 @implementation Couple
 
@@ -14,6 +15,18 @@
 {
     Couple * couple = [[Couple alloc] init];
     couple.name = name;
+    couple.ratings = [[NSMutableArray alloc] init];
     return couple;
 }
+
+- (void) addRating:(Rating *)rating
+{
+    [_ratings addObject:rating];
+}
+
+- (NSIndexSet *) getPlace
+{
+    return [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(1,2)];
+}
+
 @end

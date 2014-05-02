@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CoupleList.h"
 @class DetailViewController;
 
 @interface MasterViewController : UITableViewController
-@property (strong, nonatomic) NSMutableArray *objects;
+@property (nonatomic) CoupleList * couples;
 @end

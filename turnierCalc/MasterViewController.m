@@ -38,8 +38,8 @@
 
 - (void)insertNewObject:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
+    if (!_couples) {
+        _couples = [CoupleList getInstance];
     }
     
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Paar" message:@"Gib das Paar ein" delegate:self cancelButtonTitle:@"Fertig!" otherButtonTitles:nil];
@@ -51,8 +51,8 @@
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     NSString *name = [[alertView textFieldAtIndex:0] text];
-    Couple * newObject = [Couple initWithName:name];
-    [_objects insertObject:newObject atIndex:[_objects count]];
+    Couple *couple =[Couple initWithName:name];
+    [_couples addCouple:couple];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
     
@@ -69,14 +69,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return _couples.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    Couple *object = _objects[indexPath.row];
+    Couple *object = [_couples getCoupleAtIndex:indexPath.row];
     cell.textLabel.text = [object name];
     return cell;
 }
@@ -90,7 +90,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
+        [_couples removeCoupleAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.

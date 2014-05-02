@@ -9,6 +9,7 @@
 #import "RatingsViewController.h"
 #import "MasterViewController.h"
 #import "Couple.h"
+#import "Rating.h"
 
 @interface RatingsViewController ()
 
@@ -40,14 +41,25 @@
 }
 
 - (IBAction)addRating:(id)sender {
-    NSLog(@"well");
-    NSString * text = [_ratingsTextField text];
+    NSLog(@"Add");
+
+    // TODO: Add a rating
+    Rating * rating = [Rating initWithValue:[_ratingsTextField text]];
+    
+    
+    // TODO: Recalculate result
+    [self resetDesign];
+}
+
+- (void) resetDesign {
+    [_resultsLabel setText:@""];
     [_ratingsTextField setText:@""];
-    MasterViewController *vc = [self.tabBarController.viewControllers objectAtIndex:0];
-    NSLog(@"me workds");
-    //Couple * c = [[vc objects] objectAtIndex:0];
-    //[c.ratings addObject:text];
-    //NSLog(@"added => %@", c.ratings);
+}
+
+- (IBAction)resetRatings:(id)sender {
+    NSLog(@"Reset");
+    [self resetDesign];
+    // TODO: Reset the ratings
 }
 
 /*
