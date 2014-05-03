@@ -11,7 +11,7 @@
 
 @implementation CoupleList
 
-NSString * const placingTemplateString = @"{{name}}: {{place}} \n";
+NSString * const placingTemplateString = @"{{name}}: {{place}}. Platz   \n";
 
 + (CoupleList *) getInstance
 {
