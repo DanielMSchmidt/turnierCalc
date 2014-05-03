@@ -22,4 +22,6 @@
 - (void) removeCoupleAtIndex:(NSInteger)index;
 - (void) addRating:(Rating *)rating;
 - (void) resetRatings;
+- (NSString *) getPlaceForCoupleAtIndex:(NSInteger)index;
+- (NSInteger) coupleCount;
 @end

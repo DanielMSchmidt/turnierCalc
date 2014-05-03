@@ -42,7 +42,8 @@
 
 - (Couple *) getCoupleAtIndex:(NSInteger)index
 {
-    return _couples[index];
+    Couple * couple =_couples[index];
+    return couple;
 }
 
 - (void) removeCoupleAtIndex:(NSInteger)index
@@ -62,6 +63,24 @@
 {
     for (Couple  * couple in _couples) {
         [couple resetRating];
+    }
+}
+
+- (NSInteger) coupleCount
+{
+    return [_couples count];
+}
+
+
+- (NSString *) getPlaceForCoupleAtIndex:(NSInteger)index
+{
+    NSIndexSet * place = [_couples[index] getPlace];
+    
+    if([place firstIndex] == [place lastIndex])
+    {
+        return [NSString stringWithFormat:@"%d", [place firstIndex]];
+    } else {
+        return [NSString stringWithFormat:@"%d - %d", [place firstIndex], [place lastIndex]];
     }
 }
 

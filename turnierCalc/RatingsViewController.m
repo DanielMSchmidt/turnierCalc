@@ -31,7 +31,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [_resultsLabel setText:@""];
-;
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,22 +42,35 @@
 - (IBAction)addRating:(id)sender {
     NSLog(@"Add");
 
-    // TODO: Add a rating
     Rating * rating = [Rating initWithValue:[_ratingsTextField text]];
     [[CoupleList getInstance] addRating:rating];
+    [self setPlaceText];
     
     // TODO: Recalculate result
-    [self resetDesign];
+    [self resetInputs];
 }
 
-- (void) resetDesign {
+- (void) setPlaceText {
+    NSString *text = @"";
+    CoupleList * cl = [CoupleList getInstance];
+    
+    for (NSInteger i = 0; i < [cl coupleCount]; i++) {
+        text = [text stringByAppendingString:[cl getPlaceForCoupleAtIndex:i]];
+        text = [text stringByAppendingString:@"\n"];
+    }
+    
+    NSLog(text);
+    [_resultsLabel setText:text];
+}
+
+- (void) resetInputs {
     [_resultsLabel setText:@""];
     [_ratingsTextField setText:@""];
 }
 
 - (IBAction)resetRatings:(id)sender {
     NSLog(@"Reset");
-    [self resetDesign];
+    [self resetInputs];
     [[CoupleList getInstance] resetRatings];
 }
 
