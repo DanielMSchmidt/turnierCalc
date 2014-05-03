@@ -17,9 +17,32 @@
     return rating;
 }
 
-- (NSIndexSet *)calculateRang
+- (float)calculateRang
 {
-    return [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(1,2)];
+    // TODO: Write tests for this!  
+    // Detect majority
+    for (int rating = 0; rating < 7; rating ++) {
+        int count = 0;
+        for (int index = 0; index < [_value length]; index++) {
+            if ([[_value substringWithRange:NSMakeRange(index, index + 1)] intValue] == rating)
+            {
+                count ++;
+            }
+        }
+        if (count > ceil(([_value length] / 2)))
+        {
+            return rating;
+        }
+    }
+    
+    // No majority detected, let's use the average
+    int points = 0;
+    for (int index = 0; index < [_value length]; index++) {
+        points += [[_value substringWithRange:NSMakeRange(index, index + 1)] intValue];
+    }
+    
+    return (points / [_value length]);
 }
+
 
 @end
