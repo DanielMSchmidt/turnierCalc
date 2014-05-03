@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RatingsViewController : UIViewController
+@interface RatingsViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *ratingsTextField;
 @property (weak, nonatomic) IBOutlet UILabel *resultsLabel;
 

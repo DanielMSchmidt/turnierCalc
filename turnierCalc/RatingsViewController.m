@@ -31,6 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [_resultsLabel setText:@""];
+    _ratingsTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,10 +45,9 @@
 
     Rating * rating = [Rating initWithValue:[_ratingsTextField text]];
     [[CoupleList getInstance] addRating:rating];
-    [self setPlaceText];
     
-    // TODO: Recalculate result
     [self resetInputs];
+    [self setPlaceText];
 }
 
 - (void) setPlaceText {
@@ -56,22 +56,28 @@
     
     for (NSInteger i = 0; i < [cl coupleCount]; i++) {
         text = [text stringByAppendingString:[cl getPlaceForCoupleAtIndex:i]];
-        text = [text stringByAppendingString:@"\n"];
     }
     
-    NSLog(text);
     [_resultsLabel setText:text];
 }
 
 - (void) resetInputs {
     [_resultsLabel setText:@""];
     [_ratingsTextField setText:@""];
+    [_ratingsTextField resignFirstResponder];
 }
 
 - (IBAction)resetRatings:(id)sender {
     NSLog(@"Reset");
     [self resetInputs];
     [[CoupleList getInstance] resetRatings];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 /*
