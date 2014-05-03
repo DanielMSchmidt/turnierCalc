@@ -15,6 +15,10 @@
 
 @end
 
+
+
+NSString * const latestRatingPrefix = @"Letzte Wertung: ";
+
 @implementation RatingsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -43,11 +47,18 @@
 - (IBAction)addRating:(id)sender {
     NSLog(@"Add");
 
-    Rating * rating = [Rating initWithValue:[_ratingsTextField text]];
+    NSString * ratingText = [_ratingsTextField text];
+    Rating * rating = [Rating initWithValue:ratingText];
     [[CoupleList getInstance] addRating:rating];
     
     [self resetInputs];
     [self setPlaceText];
+    [self setLatestRatingTextAs:ratingText];
+}
+
+- (void) setLatestRatingTextAs:(NSString *) text
+{
+    [_latestRatingLabel setText:[latestRatingPrefix stringByAppendingString:text]];
 }
 
 - (void) setPlaceText {
@@ -63,6 +74,16 @@
 
 - (IBAction)undoRating:(id)sender {
     [[CoupleList getInstance] undoRating];
+    NSString * ratingText;
+    Rating * rating;
+    if ((rating = [[CoupleList getInstance] lastRating]))
+    {
+        ratingText = [rating value];
+    } else {
+        ratingText = @"---";
+    }
+    
+    [self setLatestRatingTextAs:ratingText];
 }
 
 - (void) resetInputs {

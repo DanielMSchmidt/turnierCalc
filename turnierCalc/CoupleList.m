@@ -92,4 +92,9 @@ NSString * const placingTemplateString = @"{{name}}: {{place}}. Platz \n";
     }
 }
 
+- (Rating *) lastRating
+{
+    return[_couples[_position] getLatestRating];
+}
+
 @end

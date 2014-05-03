@@ -20,4 +20,5 @@
 - (NSIndexSet *)getPlace;
 - (void) resetRating;
 - (void) dropLatestRating;
+- (Rating *) getLatestRating;
 @end

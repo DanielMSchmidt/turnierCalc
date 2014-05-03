@@ -27,4 +27,5 @@ extern NSString * const placingTemplateString;
 - (void) resetRatings;
 - (NSString *) getPlaceForCoupleAtIndex:(NSInteger)index;
 - (NSInteger) coupleCount;
+- (Rating *) lastRating;
 @end

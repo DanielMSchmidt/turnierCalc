@@ -11,5 +11,7 @@
 @interface RatingsViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *ratingsTextField;
 @property (weak, nonatomic) IBOutlet UILabel *resultsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *latestRatingLabel;
+extern NSString * const latestRatingPrefix;
 
 @end

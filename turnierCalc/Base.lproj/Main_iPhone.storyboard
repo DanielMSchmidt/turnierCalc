@@ -124,12 +124,20 @@
                                     <action selector="undoRating:" destination="bbF-BY-1Nr" eventType="touchUpInside" id="tnC-jU-OG9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noch keine Wertung vorhanden" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-57-69o">
+                                <rect key="frame" x="20" y="133" width="280" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wertungen" id="tiY-2x-Jo8"/>
                     <navigationItem key="navigationItem" id="8pE-Ks-yBG"/>
                     <connections>
+                        <outlet property="latestRatingLabel" destination="IiJ-57-69o" id="6Gw-sE-A6D"/>
                         <outlet property="ratingsTextField" destination="vPl-CY-6zo" id="n9c-CZ-DDP"/>
                         <outlet property="resultsLabel" destination="Ns5-K0-zYu" id="BAl-9v-DQE"/>
                     </connections>

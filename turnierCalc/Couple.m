@@ -39,4 +39,9 @@
     [_ratings removeLastObject];
 }
 
+- (Rating *) getLatestRating
+{
+    return [_ratings lastObject];
+}
+
 @end
