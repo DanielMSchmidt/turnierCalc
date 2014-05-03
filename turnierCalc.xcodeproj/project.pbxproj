@@ -1,499 +1,1230 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		E75B5FBE1906B07400815FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FBD1906B07400815FA1 /* Foundation.framework */; };
-		E75B5FC01906B07400815FA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FBF1906B07400815FA1 /* CoreGraphics.framework */; };
-		E75B5FC21906B07400815FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FC11906B07400815FA1 /* UIKit.framework */; };
-		E75B5FC81906B07400815FA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FC61906B07400815FA1 /* InfoPlist.strings */; };
-		E75B5FCA1906B07400815FA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FC91906B07400815FA1 /* main.m */; };
-		E75B5FCE1906B07400815FA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FCD1906B07400815FA1 /* AppDelegate.m */; };
-		E75B5FD11906B07400815FA1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FCF1906B07400815FA1 /* Main_iPhone.storyboard */; };
-		E75B5FD71906B07400815FA1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FD61906B07400815FA1 /* MasterViewController.m */; };
-		E75B5FDC1906B07400815FA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FDB1906B07400815FA1 /* Images.xcassets */; };
-		E75B5FE31906B07400815FA1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FE21906B07400815FA1 /* XCTest.framework */; };
-		E75B5FE41906B07400815FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FBD1906B07400815FA1 /* Foundation.framework */; };
-		E75B5FE51906B07400815FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FC11906B07400815FA1 /* UIKit.framework */; };
-		E75B5FED1906B07400815FA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FEB1906B07400815FA1 /* InfoPlist.strings */; };
-		E75B5FEF1906B07400815FA1 /* turnierCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FEE1906B07400815FA1 /* turnierCalcTests.m */; };
-		E75B5FFA1906C82D00815FA1 /* Couple.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FF91906C82D00815FA1 /* Couple.m */; };
-		E79E551019123B160046F07D /* Rating.m in Sources */ = {isa = PBXBuildFile; fileRef = E79E550F19123B160046F07D /* Rating.m */; };
-		E7C34F241906DB9300D98F14 /* RatingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C34F231906DB9300D98F14 /* RatingsViewController.m */; };
-		E7D3EB4F1913F279009B6E3F /* CoupleList.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D3EB4E1913F279009B6E3F /* CoupleList.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E75B5FE61906B07400815FA1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E75B5FB21906B07400815FA1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E75B5FB91906B07400815FA1;
-			remoteInfo = turnierCalc;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		E75B5FBA1906B07400815FA1 /* turnierCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turnierCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E75B5FBD1906B07400815FA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E75B5FBF1906B07400815FA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E75B5FC11906B07400815FA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E75B5FC51906B07400815FA1 /* turnierCalc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "turnierCalc-Info.plist"; sourceTree = "<group>"; };
-		E75B5FC71906B07400815FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E75B5FC91906B07400815FA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E75B5FCB1906B07400815FA1 /* turnierCalc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "turnierCalc-Prefix.pch"; sourceTree = "<group>"; };
-		E75B5FCC1906B07400815FA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E75B5FCD1906B07400815FA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E75B5FD01906B07400815FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		E75B5FD51906B07400815FA1 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		E75B5FD61906B07400815FA1 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		E75B5FDB1906B07400815FA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E75B5FE11906B07400815FA1 /* turnierCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = turnierCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E75B5FE21906B07400815FA1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		E75B5FEA1906B07400815FA1 /* turnierCalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "turnierCalcTests-Info.plist"; sourceTree = "<group>"; };
-		E75B5FEC1906B07400815FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E75B5FEE1906B07400815FA1 /* turnierCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = turnierCalcTests.m; sourceTree = "<group>"; };
-		E75B5FF81906C82D00815FA1 /* Couple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Couple.h; sourceTree = "<group>"; };
-		E75B5FF91906C82D00815FA1 /* Couple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Couple.m; sourceTree = "<group>"; };
-		E79E550E19123B160046F07D /* Rating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rating.h; sourceTree = "<group>"; };
-		E79E550F19123B160046F07D /* Rating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rating.m; sourceTree = "<group>"; };
-		E7C34F221906DB9300D98F14 /* RatingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingsViewController.h; sourceTree = "<group>"; };
-		E7C34F231906DB9300D98F14 /* RatingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingsViewController.m; sourceTree = "<group>"; };
-		E7D3EB4D1913F279009B6E3F /* CoupleList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoupleList.h; sourceTree = "<group>"; };
-		E7D3EB4E1913F279009B6E3F /* CoupleList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoupleList.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		E75B5FB71906B07400815FA1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E75B5FC01906B07400815FA1 /* CoreGraphics.framework in Frameworks */,
-				E75B5FC21906B07400815FA1 /* UIKit.framework in Frameworks */,
-				E75B5FBE1906B07400815FA1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E75B5FDE1906B07400815FA1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E75B5FE31906B07400815FA1 /* XCTest.framework in Frameworks */,
-				E75B5FE51906B07400815FA1 /* UIKit.framework in Frameworks */,
-				E75B5FE41906B07400815FA1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		E75B5FB11906B07400815FA1 = {
-			isa = PBXGroup;
-			children = (
-				E75B5FC31906B07400815FA1 /* turnierCalc */,
-				E75B5FE81906B07400815FA1 /* turnierCalcTests */,
-				E75B5FBC1906B07400815FA1 /* Frameworks */,
-				E75B5FBB1906B07400815FA1 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		E75B5FBB1906B07400815FA1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E75B5FBA1906B07400815FA1 /* turnierCalc.app */,
-				E75B5FE11906B07400815FA1 /* turnierCalcTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E75B5FBC1906B07400815FA1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E75B5FBD1906B07400815FA1 /* Foundation.framework */,
-				E75B5FBF1906B07400815FA1 /* CoreGraphics.framework */,
-				E75B5FC11906B07400815FA1 /* UIKit.framework */,
-				E75B5FE21906B07400815FA1 /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E75B5FC31906B07400815FA1 /* turnierCalc */ = {
-			isa = PBXGroup;
-			children = (
-				E75B5FCC1906B07400815FA1 /* AppDelegate.h */,
-				E75B5FCD1906B07400815FA1 /* AppDelegate.m */,
-				E75B5FCF1906B07400815FA1 /* Main_iPhone.storyboard */,
-				E75B5FD51906B07400815FA1 /* MasterViewController.h */,
-				E75B5FD61906B07400815FA1 /* MasterViewController.m */,
-				E75B5FDB1906B07400815FA1 /* Images.xcassets */,
-				E75B5FC41906B07400815FA1 /* Supporting Files */,
-				E75B5FF81906C82D00815FA1 /* Couple.h */,
-				E75B5FF91906C82D00815FA1 /* Couple.m */,
-				E79E550E19123B160046F07D /* Rating.h */,
-				E79E550F19123B160046F07D /* Rating.m */,
-				E7C34F221906DB9300D98F14 /* RatingsViewController.h */,
-				E7C34F231906DB9300D98F14 /* RatingsViewController.m */,
-				E7D3EB4D1913F279009B6E3F /* CoupleList.h */,
-				E7D3EB4E1913F279009B6E3F /* CoupleList.m */,
-			);
-			path = turnierCalc;
-			sourceTree = "<group>";
-		};
-		E75B5FC41906B07400815FA1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E75B5FC51906B07400815FA1 /* turnierCalc-Info.plist */,
-				E75B5FC61906B07400815FA1 /* InfoPlist.strings */,
-				E75B5FC91906B07400815FA1 /* main.m */,
-				E75B5FCB1906B07400815FA1 /* turnierCalc-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E75B5FE81906B07400815FA1 /* turnierCalcTests */ = {
-			isa = PBXGroup;
-			children = (
-				E75B5FEE1906B07400815FA1 /* turnierCalcTests.m */,
-				E75B5FE91906B07400815FA1 /* Supporting Files */,
-			);
-			path = turnierCalcTests;
-			sourceTree = "<group>";
-		};
-		E75B5FE91906B07400815FA1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E75B5FEA1906B07400815FA1 /* turnierCalcTests-Info.plist */,
-				E75B5FEB1906B07400815FA1 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		E75B5FB91906B07400815FA1 /* turnierCalc */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E75B5FF21906B07400815FA1 /* Build configuration list for PBXNativeTarget "turnierCalc" */;
-			buildPhases = (
-				E75B5FB61906B07400815FA1 /* Sources */,
-				E75B5FB71906B07400815FA1 /* Frameworks */,
-				E75B5FB81906B07400815FA1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = turnierCalc;
-			productName = turnierCalc;
-			productReference = E75B5FBA1906B07400815FA1 /* turnierCalc.app */;
-			productType = "com.apple.product-type.application";
-		};
-		E75B5FE01906B07400815FA1 /* turnierCalcTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E75B5FF51906B07400815FA1 /* Build configuration list for PBXNativeTarget "turnierCalcTests" */;
-			buildPhases = (
-				E75B5FDD1906B07400815FA1 /* Sources */,
-				E75B5FDE1906B07400815FA1 /* Frameworks */,
-				E75B5FDF1906B07400815FA1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E75B5FE71906B07400815FA1 /* PBXTargetDependency */,
-			);
-			name = turnierCalcTests;
-			productName = turnierCalcTests;
-			productReference = E75B5FE11906B07400815FA1 /* turnierCalcTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		E75B5FB21906B07400815FA1 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Daniel Schmidt";
-				TargetAttributes = {
-					E75B5FE01906B07400815FA1 = {
-						TestTargetID = E75B5FB91906B07400815FA1;
-					};
-				};
-			};
-			buildConfigurationList = E75B5FB51906B07400815FA1 /* Build configuration list for PBXProject "turnierCalc" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = E75B5FB11906B07400815FA1;
-			productRefGroup = E75B5FBB1906B07400815FA1 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				E75B5FB91906B07400815FA1 /* turnierCalc */,
-				E75B5FE01906B07400815FA1 /* turnierCalcTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		E75B5FB81906B07400815FA1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E75B5FDC1906B07400815FA1 /* Images.xcassets in Resources */,
-				E75B5FD11906B07400815FA1 /* Main_iPhone.storyboard in Resources */,
-				E75B5FC81906B07400815FA1 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E75B5FDF1906B07400815FA1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E75B5FED1906B07400815FA1 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		E75B5FB61906B07400815FA1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E79E551019123B160046F07D /* Rating.m in Sources */,
-				E75B5FCE1906B07400815FA1 /* AppDelegate.m in Sources */,
-				E7C34F241906DB9300D98F14 /* RatingsViewController.m in Sources */,
-				E7D3EB4F1913F279009B6E3F /* CoupleList.m in Sources */,
-				E75B5FD71906B07400815FA1 /* MasterViewController.m in Sources */,
-				E75B5FCA1906B07400815FA1 /* main.m in Sources */,
-				E75B5FFA1906C82D00815FA1 /* Couple.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E75B5FDD1906B07400815FA1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E75B5FEF1906B07400815FA1 /* turnierCalcTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E75B5FE71906B07400815FA1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E75B5FB91906B07400815FA1 /* turnierCalc */;
-			targetProxy = E75B5FE61906B07400815FA1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E75B5FC61906B07400815FA1 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E75B5FC71906B07400815FA1 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E75B5FCF1906B07400815FA1 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E75B5FD01906B07400815FA1 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		E75B5FEB1906B07400815FA1 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E75B5FEC1906B07400815FA1 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		E75B5FF01906B07400815FA1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E75B5FF11906B07400815FA1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E75B5FF31906B07400815FA1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "turnierCalc/turnierCalc-Prefix.pch";
-				INFOPLIST_FILE = "turnierCalc/turnierCalc-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		E75B5FF41906B07400815FA1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "turnierCalc/turnierCalc-Prefix.pch";
-				INFOPLIST_FILE = "turnierCalc/turnierCalc-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		E75B5FF61906B07400815FA1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/turnierCalc.app/turnierCalc";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "turnierCalc/turnierCalc-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "turnierCalcTests/turnierCalcTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		E75B5FF71906B07400815FA1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/turnierCalc.app/turnierCalc";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "turnierCalc/turnierCalc-Prefix.pch";
-				INFOPLIST_FILE = "turnierCalcTests/turnierCalcTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		E75B5FB51906B07400815FA1 /* Build configuration list for PBXProject "turnierCalc" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E75B5FF01906B07400815FA1 /* Debug */,
-				E75B5FF11906B07400815FA1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E75B5FF21906B07400815FA1 /* Build configuration list for PBXNativeTarget "turnierCalc" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E75B5FF31906B07400815FA1 /* Debug */,
-				E75B5FF41906B07400815FA1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E75B5FF51906B07400815FA1 /* Build configuration list for PBXNativeTarget "turnierCalcTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E75B5FF61906B07400815FA1 /* Debug */,
-				E75B5FF71906B07400815FA1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = E75B5FB21906B07400815FA1 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>3FDEBB629E28429E9E3D6FD1</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-turnierCalc.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>495C0ECBB7AC4C23AF8120E6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>4982B8BB08C841E5831184BC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-turnierCalc-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>74C4285769634AFBABBE1912</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-turnierCalc.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-turnierCalc.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BF5613239006415390979845</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3FDEBB629E28429E9E3D6FD1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FB11906B07400815FA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E75B5FC31906B07400815FA1</string>
+				<string>E75B5FE81906B07400815FA1</string>
+				<string>E75B5FBC1906B07400815FA1</string>
+				<string>E75B5FBB1906B07400815FA1</string>
+				<string>74C4285769634AFBABBE1912</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FB21906B07400815FA1</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Daniel Schmidt</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>E75B5FE01906B07400815FA1</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>E75B5FB91906B07400815FA1</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>E75B5FB51906B07400815FA1</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>E75B5FB11906B07400815FA1</string>
+			<key>productRefGroup</key>
+			<string>E75B5FBB1906B07400815FA1</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>E75B5FB91906B07400815FA1</string>
+				<string>E75B5FE01906B07400815FA1</string>
+			</array>
+		</dict>
+		<key>E75B5FB51906B07400815FA1</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E75B5FF01906B07400815FA1</string>
+				<string>E75B5FF11906B07400815FA1</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>E75B5FB61906B07400815FA1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E79E551019123B160046F07D</string>
+				<string>E75B5FCE1906B07400815FA1</string>
+				<string>E7C34F241906DB9300D98F14</string>
+				<string>E7D3EB4F1913F279009B6E3F</string>
+				<string>E75B5FD71906B07400815FA1</string>
+				<string>E75B5FCA1906B07400815FA1</string>
+				<string>E75B5FFA1906C82D00815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E75B5FB71906B07400815FA1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E75B5FC01906B07400815FA1</string>
+				<string>E75B5FC21906B07400815FA1</string>
+				<string>E75B5FBE1906B07400815FA1</string>
+				<string>BF5613239006415390979845</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E75B5FB81906B07400815FA1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E75B5FDC1906B07400815FA1</string>
+				<string>E75B5FD11906B07400815FA1</string>
+				<string>E75B5FC81906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E75B5FB91906B07400815FA1</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>E75B5FF21906B07400815FA1</string>
+			<key>buildPhases</key>
+			<array>
+				<string>495C0ECBB7AC4C23AF8120E6</string>
+				<string>E75B5FB61906B07400815FA1</string>
+				<string>E75B5FB71906B07400815FA1</string>
+				<string>E75B5FB81906B07400815FA1</string>
+				<string>4982B8BB08C841E5831184BC</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>turnierCalc</string>
+			<key>productName</key>
+			<string>turnierCalc</string>
+			<key>productReference</key>
+			<string>E75B5FBA1906B07400815FA1</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>E75B5FBA1906B07400815FA1</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>turnierCalc.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>E75B5FBB1906B07400815FA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E75B5FBA1906B07400815FA1</string>
+				<string>E75B5FE11906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FBC1906B07400815FA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E75B5FBD1906B07400815FA1</string>
+				<string>E75B5FBF1906B07400815FA1</string>
+				<string>E75B5FC11906B07400815FA1</string>
+				<string>E75B5FE21906B07400815FA1</string>
+				<string>3FDEBB629E28429E9E3D6FD1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FBD1906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>E75B5FBE1906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FBD1906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FBF1906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>E75B5FC01906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FBF1906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FC11906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>E75B5FC21906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FC11906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FC31906B07400815FA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E75B5FCC1906B07400815FA1</string>
+				<string>E75B5FCD1906B07400815FA1</string>
+				<string>E75B5FCF1906B07400815FA1</string>
+				<string>E75B5FD51906B07400815FA1</string>
+				<string>E75B5FD61906B07400815FA1</string>
+				<string>E75B5FDB1906B07400815FA1</string>
+				<string>E75B5FC41906B07400815FA1</string>
+				<string>E75B5FF81906C82D00815FA1</string>
+				<string>E75B5FF91906C82D00815FA1</string>
+				<string>E79E550E19123B160046F07D</string>
+				<string>E79E550F19123B160046F07D</string>
+				<string>E7C34F221906DB9300D98F14</string>
+				<string>E7C34F231906DB9300D98F14</string>
+				<string>E7D3EB4D1913F279009B6E3F</string>
+				<string>E7D3EB4E1913F279009B6E3F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>turnierCalc</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FC41906B07400815FA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E75B5FC51906B07400815FA1</string>
+				<string>E75B5FC61906B07400815FA1</string>
+				<string>E75B5FC91906B07400815FA1</string>
+				<string>E75B5FCB1906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FC51906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>turnierCalc-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FC61906B07400815FA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E75B5FC71906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FC71906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FC81906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FC61906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FC91906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FCA1906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FC91906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FCB1906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>turnierCalc-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FCC1906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FCD1906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FCE1906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FCD1906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FCF1906B07400815FA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E75B5FD01906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main_iPhone.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FD01906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main_iPhone.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FD11906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FCF1906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FD51906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MasterViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FD61906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MasterViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FD71906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FD61906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FDB1906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FDC1906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FDB1906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FDD1906B07400815FA1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E75B5FEF1906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E75B5FDE1906B07400815FA1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E75B5FE31906B07400815FA1</string>
+				<string>E75B5FE51906B07400815FA1</string>
+				<string>E75B5FE41906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E75B5FDF1906B07400815FA1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E75B5FED1906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E75B5FE01906B07400815FA1</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>E75B5FF51906B07400815FA1</string>
+			<key>buildPhases</key>
+			<array>
+				<string>E75B5FDD1906B07400815FA1</string>
+				<string>E75B5FDE1906B07400815FA1</string>
+				<string>E75B5FDF1906B07400815FA1</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>E75B5FE71906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>turnierCalcTests</string>
+			<key>productName</key>
+			<string>turnierCalcTests</string>
+			<key>productReference</key>
+			<string>E75B5FE11906B07400815FA1</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>E75B5FE11906B07400815FA1</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>turnierCalcTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>E75B5FE21906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>E75B5FE31906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FE21906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FE41906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FBD1906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FE51906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FC11906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FE61906B07400815FA1</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>E75B5FB21906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>E75B5FB91906B07400815FA1</string>
+			<key>remoteInfo</key>
+			<string>turnierCalc</string>
+		</dict>
+		<key>E75B5FE71906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>E75B5FB91906B07400815FA1</string>
+			<key>targetProxy</key>
+			<string>E75B5FE61906B07400815FA1</string>
+		</dict>
+		<key>E75B5FE81906B07400815FA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E75B5FEE1906B07400815FA1</string>
+				<string>E75B5FE91906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>turnierCalcTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FE91906B07400815FA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E75B5FEA1906B07400815FA1</string>
+				<string>E75B5FEB1906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FEA1906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>turnierCalcTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FEB1906B07400815FA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E75B5FEC1906B07400815FA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FEC1906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FED1906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FEB1906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FEE1906B07400815FA1</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>turnierCalcTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FEF1906B07400815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FEE1906B07400815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E75B5FF01906B07400815FA1</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E75B5FF11906B07400815FA1</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>E75B5FF21906B07400815FA1</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E75B5FF31906B07400815FA1</string>
+				<string>E75B5FF41906B07400815FA1</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>E75B5FF31906B07400815FA1</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>74C4285769634AFBABBE1912</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>turnierCalc/turnierCalc-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>turnierCalc/turnierCalc-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E75B5FF41906B07400815FA1</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>74C4285769634AFBABBE1912</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>turnierCalc/turnierCalc-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>turnierCalc/turnierCalc-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>E75B5FF51906B07400815FA1</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E75B5FF61906B07400815FA1</string>
+				<string>E75B5FF71906B07400815FA1</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>E75B5FF61906B07400815FA1</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/turnierCalc.app/turnierCalc</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>turnierCalc/turnierCalc-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>turnierCalcTests/turnierCalcTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E75B5FF71906B07400815FA1</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/turnierCalc.app/turnierCalc</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>turnierCalc/turnierCalc-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>turnierCalcTests/turnierCalcTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>E75B5FF81906C82D00815FA1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Couple.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FF91906C82D00815FA1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Couple.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E75B5FFA1906C82D00815FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E75B5FF91906C82D00815FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E79E550E19123B160046F07D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Rating.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E79E550F19123B160046F07D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Rating.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E79E551019123B160046F07D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E79E550F19123B160046F07D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7C34F221906DB9300D98F14</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RatingsViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7C34F231906DB9300D98F14</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>RatingsViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7C34F241906DB9300D98F14</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7C34F231906DB9300D98F14</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7D3EB4D1913F279009B6E3F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>CoupleList.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7D3EB4E1913F279009B6E3F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>CoupleList.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7D3EB4F1913F279009B6E3F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7D3EB4E1913F279009B6E3F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>E75B5FB21906B07400815FA1</string>
+</dict>
+</plist>

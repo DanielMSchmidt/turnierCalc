@@ -7,8 +7,11 @@
 //
 
 #import "CoupleList.h"
+#import "GRMustache.h"
 
 @implementation CoupleList
+
+NSString * const placingTemplateString = @"{{name}}: {{place}} \n";
 
 + (CoupleList *) getInstance
 {
@@ -78,9 +81,9 @@
     
     if([place firstIndex] == [place lastIndex])
     {
-        return [NSString stringWithFormat:@"%d", [place firstIndex]];
+        return [GRMustacheTemplate renderObject:@{ @"name": [[_couples objectAtIndex:index] name], @"place": [NSString stringWithFormat:@"%d", [place firstIndex]]} fromString:placingTemplateString error:NULL];
     } else {
-        return [NSString stringWithFormat:@"%d - %d", [place firstIndex], [place lastIndex]];
+        return [GRMustacheTemplate renderObject:@{ @"name": [[_couples objectAtIndex:index] name], @"place": [NSString stringWithFormat:@"%d - %d", [place firstIndex], [place lastIndex]]} fromString:placingTemplateString error:NULL];
     }
 }
 

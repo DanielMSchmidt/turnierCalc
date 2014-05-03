@@ -10,9 +10,11 @@
 #import "Couple.h"
 #import "Rating.h"
 
+
 @interface CoupleList : NSObject
 @property (strong, nonatomic) NSMutableArray *couples;
 @property (nonatomic) NSInteger position;
+extern NSString * const placingTemplateString;
 
 + (CoupleList *) getInstance;
 
