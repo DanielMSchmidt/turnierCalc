@@ -34,4 +34,9 @@
     _ratings = [[NSMutableArray alloc] init];
 }
 
+- (void) dropLatestRating
+{
+    [_ratings removeLastObject];
+}
+
 @end

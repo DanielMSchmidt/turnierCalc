@@ -23,6 +23,7 @@ extern NSString * const placingTemplateString;
 - (Couple *) getCoupleAtIndex:(NSInteger)index;
 - (void) removeCoupleAtIndex:(NSInteger)index;
 - (void) addRating:(Rating *)rating;
+- (void) undoRating;
 - (void) resetRatings;
 - (NSString *) getPlaceForCoupleAtIndex:(NSInteger)index;
 - (NSInteger) coupleCount;

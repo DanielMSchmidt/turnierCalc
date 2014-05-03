@@ -61,6 +61,10 @@
     [_resultsLabel setText:text];
 }
 
+- (IBAction)undoRating:(id)sender {
+    [[CoupleList getInstance] undoRating];
+}
+
 - (void) resetInputs {
     [_resultsLabel setText:@""];
     [_ratingsTextField setText:@""];

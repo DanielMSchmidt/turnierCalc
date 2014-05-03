@@ -56,8 +56,7 @@ NSString * const placingTemplateString = @"{{name}}: {{place}}. Platz \n";
 
 - (void) addRating:(Rating *)rating
 {
-    Couple *c  = _couples[_position];
-    [c addRating:rating];
+    [_couples[_position] addRating:rating];
 
     _position = (_position + 1) % [self count];
 }
@@ -72,6 +71,12 @@ NSString * const placingTemplateString = @"{{name}}: {{place}}. Platz \n";
 - (NSInteger) coupleCount
 {
     return [_couples count];
+}
+
+- (void) undoRating
+{
+    _position = (_position - 1) % [self count];
+    [_couples[_position] dropLatestRating];
 }
 
 

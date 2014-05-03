@@ -19,4 +19,5 @@
 - (void) addRating:(Rating *)rating;
 - (NSIndexSet *)getPlace;
 - (void) resetRating;
+- (void) dropLatestRating;
 @end
