@@ -11,7 +11,7 @@
 
 @implementation CoupleList
 
-NSString * const placingTemplateString = @"{{name}}: {{place}}. Platz \n";
+NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 + (CoupleList *) getInstance
 {
@@ -80,16 +80,11 @@ NSString * const placingTemplateString = @"{{name}}: {{place}}. Platz \n";
 }
 
 
-- (NSString *) getPlaceForCoupleAtIndex:(NSInteger)index
+- (NSArray *) getPlacedCouplesReadyToDisplay
 {
-    NSIndexSet * place = [_couples[index] getPlace];
+    //return [GRMustacheTemplate renderObject:@{ @"name": [[_couples objectAtIndex:index] name], @"place": [NSString stringWithFormat:@"%f", place]} fromString:placingTemplateString error:NULL];
     
-    if([place firstIndex] == [place lastIndex])
-    {
-        return [GRMustacheTemplate renderObject:@{ @"name": [[_couples objectAtIndex:index] name], @"place": [NSString stringWithFormat:@"%d", [place firstIndex]]} fromString:placingTemplateString error:NULL];
-    } else {
-        return [GRMustacheTemplate renderObject:@{ @"name": [[_couples objectAtIndex:index] name], @"place": [NSString stringWithFormat:@"%d - %d", [place firstIndex], [place lastIndex]]} fromString:placingTemplateString error:NULL];
-    }
+    return [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
 }
 
 - (Rating *) lastRating

@@ -52,7 +52,6 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
     [[CoupleList getInstance] addRating:rating];
     
     [self resetInputs];
-    [self setPlaceText];
     [self setLatestRatingTextAs:ratingText];
 }
 
@@ -61,16 +60,6 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
     [_latestRatingLabel setText:[latestRatingPrefix stringByAppendingString:text]];
 }
 
-- (void) setPlaceText {
-    NSString *text = @"";
-    CoupleList * cl = [CoupleList getInstance];
-    
-    for (NSInteger i = 0; i < [cl coupleCount]; i++) {
-        text = [text stringByAppendingString:[cl getPlaceForCoupleAtIndex:i]];
-    }
-    
-    [_resultsLabel setText:text];
-}
 
 - (IBAction)undoRating:(id)sender {
     [[CoupleList getInstance] undoRating];
@@ -103,6 +92,22 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
     [textField resignFirstResponder];
     
     return YES;
+}
+
+// UITableView Delegation
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[CoupleList getInstance] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    //cell.textLabel.text = [[[CoupleList getInstance] getPlacedCouplesReadyToDisplay] objectAtIndex:indexPath.row];
+    cell.textLabel.text = @"Halo";
+    return cell;
 }
 
 /*
