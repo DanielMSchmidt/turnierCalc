@@ -29,6 +29,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
     {
         _couples = [[NSMutableArray alloc] init];
         _position = 0;
+        
     }
     return self;
 }
@@ -36,6 +37,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 - (void) addCouple:(Couple *)couple
 {
     [_couples insertObject:couple atIndex:[_couples count]];
+    [self updateRang];
 }
 
 - (NSInteger) count
@@ -58,7 +60,12 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 {
     [_couples[_position] addRating:rating];
 
-    _position = (_position + 1) % [self count];
+    _position++;
+    if(_position >= [self count])
+    {
+        _position = 0;
+        [self updateRang];
+    }
 }
 
 - (void) resetRatings
@@ -90,6 +97,12 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 - (Rating *) lastRating
 {
     return[_couples[_position] getLatestRating];
+}
+
+- (void) updateRang
+{
+    // TODO
+    
 }
 
 @end

@@ -10,7 +10,6 @@
 
 @interface RatingsViewController : UIViewController <UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *ratingsTextField;
-@property (weak, nonatomic) IBOutlet UILabel *resultsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *latestRatingLabel;
 extern NSString * const latestRatingPrefix;
 @property (weak, nonatomic) IBOutlet UITableView *resultTable;

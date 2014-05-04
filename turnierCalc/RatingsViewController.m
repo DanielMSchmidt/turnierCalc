@@ -34,7 +34,6 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [_resultsLabel setText:@""];
     _ratingsTextField.delegate = self;
 }
 
@@ -76,7 +75,7 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
 }
 
 - (void) resetInputs {
-    [_resultsLabel setText:@""];
+    [_resultTable reloadData];
     [_ratingsTextField setText:@""];
     [_ratingsTextField resignFirstResponder];
 }
@@ -108,6 +107,11 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
     //cell.textLabel.text = [[[CoupleList getInstance] getPlacedCouplesReadyToDisplay] objectAtIndex:indexPath.row];
     cell.textLabel.text = @"Halo";
     return cell;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [_resultTable reloadData];
 }
 
 /*

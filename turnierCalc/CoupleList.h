@@ -12,7 +12,8 @@
 
 
 @interface CoupleList : NSObject
-@property (strong, nonatomic) NSMutableArray *couples;
+@property (strong, nonatomic) NSMutableArray * couples;
+
 @property (nonatomic) NSInteger position;
 extern NSString * const placingTemplateString;
 
@@ -25,8 +26,8 @@ extern NSString * const placingTemplateString;
 - (void) addRating:(Rating *)rating;
 - (void) undoRating;
 - (void) resetRatings;
-- (NSString *) getPlaceForCoupleAtIndex:(NSInteger)index;
 - (NSInteger) coupleCount;
 - (Rating *) lastRating;
 - (NSArray *) getPlacedCouplesReadyToDisplay;
+- (void) updateRang;
 @end
