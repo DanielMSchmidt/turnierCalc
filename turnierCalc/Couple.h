@@ -17,8 +17,9 @@
 + (Couple *)initWithName:(NSString*)name;
 
 - (void) addRating:(Rating *)rating;
-- (NSIndexSet *)getPlace;
+- (float) getPlace;
 - (void) resetRating;
 - (void) dropLatestRating;
 - (Rating *) getLatestRating;
+- (NSComparisonResult) compare:(Couple *)otherObject;
 @end

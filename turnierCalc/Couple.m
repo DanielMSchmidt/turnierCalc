@@ -24,9 +24,22 @@
     [_ratings addObject:rating];
 }
 
-- (NSIndexSet *)getPlace
+- (float)getPlace
 {
-    return [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(1,2)];
+    float placeSum = 0;
+    for (NSInteger currentId = 0; currentId < [_ratings count]; currentId++) {
+        placeSum = placeSum + [_ratings[currentId] calculateRang];
+    }
+    
+    float place = placeSum / [_ratings count];
+    NSLog(@"%f", place);
+
+    return place;
+}
+
+- (NSComparisonResult) compare:(Couple *)otherObject
+{
+    return [[NSNumber numberWithFloat:[self getPlace]] compare:[NSNumber numberWithFloat:[otherObject getPlace]]];
 }
 
 - (void) resetRating
