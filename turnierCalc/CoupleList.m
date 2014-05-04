@@ -89,9 +89,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (NSArray *) getPlacedCouplesReadyToDisplay
 {
-    //return [GRMustacheTemplate renderObject:@{ @"name": [[_couples objectAtIndex:index] name], @"place": [NSString stringWithFormat:@"%f", place]} fromString:placingTemplateString error:NULL];
-    
-    return [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+    return [[NSArray alloc] initWithArray:_couplesReadyToDisplay];
 }
 
 - (Rating *) lastRating
@@ -101,7 +99,22 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (void) updateRang
 {
-    // TODO
+    NSArray * orderedCouples = [_couples sortedArrayUsingSelector:@selector(compare:)];
+    
+    // TODO: Support groupings if same place (http://stackoverflow.com/questions/2767164/objective-c-create-arrays-from-first-array-based-on-value)
+    NSMutableArray * newRang = [[NSMutableArray alloc] init];
+    for(int i = 0; i < [orderedCouples count]; i++)
+    {
+        [newRang addObject:
+            [GRMustacheTemplate
+                renderObject:@{
+                        @"name": [[orderedCouples objectAtIndex:i] name],
+                        @"place": [NSString stringWithFormat:@"%d", i + 1]}
+             fromString:placingTemplateString
+             error:NULL]];
+    }
+    
+    _couplesReadyToDisplay = newRang;
     
 }
 

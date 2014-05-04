@@ -104,8 +104,7 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    //cell.textLabel.text = [[[CoupleList getInstance] getPlacedCouplesReadyToDisplay] objectAtIndex:indexPath.row];
-    cell.textLabel.text = @"Halo";
+    cell.textLabel.text = [[[CoupleList getInstance] getPlacedCouplesReadyToDisplay] objectAtIndex:indexPath.row];
     return cell;
 }
 

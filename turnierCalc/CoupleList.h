@@ -13,7 +13,7 @@
 
 @interface CoupleList : NSObject
 @property (strong, nonatomic) NSMutableArray * couples;
-
+@property (strong, nonatomic) NSMutableArray * couplesReadyToDisplay;
 @property (nonatomic) NSInteger position;
 extern NSString * const placingTemplateString;
 
