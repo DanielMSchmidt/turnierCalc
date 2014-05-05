@@ -13,4 +13,5 @@
 @property (strong, nonatomic) NSString * value;
 + (Rating *)initWithValue:(NSString *)value;
 - (float) calculateRang;
+- (int) length;
 @end

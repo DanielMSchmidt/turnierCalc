@@ -49,10 +49,15 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
 
     NSString * ratingText = [_ratingsTextField text];
     Rating * rating = [Rating initWithValue:ratingText];
-    [[CoupleList getInstance] addRating:rating];
+
+    if(![[CoupleList getInstance] addRating:rating])
+    {
+        [self invalidRatingError];
+    } else {
+        [self setLatestRatingTextAs:ratingText];
+    }
     
     [self resetInputs];
-    [self setLatestRatingTextAs:ratingText];
 }
 
 - (void) setLatestRatingTextAs:(NSString *) text
@@ -60,6 +65,13 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
     [_latestRatingLabel setText:[latestRatingPrefix stringByAppendingString:text]];
 }
 
+
+- (void) invalidRatingError
+{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Wertung fehlerhaft" message:@"Sie haben eine andere Anzahl an Wertungen als sonst angegeben" delegate:self cancelButtonTitle:@"Nochmal" otherButtonTitles:nil];
+    alert.alertViewStyle = UIAlertViewStyleDefault;
+    [alert show];
+}
 
 - (IBAction)undoRating:(id)sender {
     [[CoupleList getInstance] undoRating];
@@ -90,8 +102,11 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
 
 - (IBAction)resetRatings:(id)sender {
     NSLog(@"Reset");
-    [self resetInputs];
+
+    [self setLatestRatingTextAs:@"---"];
     [[CoupleList getInstance] resetRatings];
+    [self setCurrentCouple];
+    [self resetInputs];    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

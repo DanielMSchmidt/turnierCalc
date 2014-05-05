@@ -30,7 +30,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
         _couples = [[NSMutableArray alloc] init];
         _position = 0;
         _ratingCount = 0;
-        
+        _lengthOfRatings = 0;
     }
     return self;
 }
@@ -57,8 +57,15 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
     [_couples removeObjectAtIndex:index];
 }
 
-- (void) addRating:(Rating *)rating
+- (BOOL) addRating:(Rating *)rating
 {
+    if (_lengthOfRatings == 0)
+    {
+        _lengthOfRatings = [rating length];
+    } else if (_lengthOfRatings != [rating length]) {
+        return NO;
+    }
+
     [[self activeCouple] addRating:rating];
 
     _position++;
@@ -69,6 +76,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
         _position = 0;
         [self updateRang];
     }
+    return YES;
 }
 
 - (void) resetRatings
@@ -78,6 +86,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
     }
     _position = 0;
     _ratingCount = 0;
+    _lengthOfRatings = 0;
 }
 
 - (NSInteger) coupleCount

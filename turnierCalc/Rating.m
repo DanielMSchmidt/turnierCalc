@@ -44,5 +44,10 @@
     return (points / [_value length]);
 }
 
+- (int) length
+{
+    return (int) [_value length];
+}
+
 
 @end
