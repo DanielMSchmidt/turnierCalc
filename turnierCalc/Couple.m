@@ -30,8 +30,13 @@
     for (NSInteger currentId = 0; currentId < [_ratings count]; currentId++) {
         placeSum = placeSum + [_ratings[currentId] calculateRang];
     }
-    
-    float place = placeSum / [_ratings count];
+
+    float place;
+    if ([_ratings count] > 0)
+    {
+         place = placeSum / [_ratings count];
+    }
+
     NSLog(@"%f", place);
 
     return place;

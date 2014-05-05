@@ -38,7 +38,7 @@
     // No majority detected, let's use the average
     int points = 0;
     for (int index = 0; index < [_value length]; index++) {
-        points += [[_value substringWithRange:NSMakeRange(index, index + 1)] intValue];
+        points += [[_value substringWithRange:NSMakeRange(index, 1)] intValue];
     }
     
     return (points / [_value length]);

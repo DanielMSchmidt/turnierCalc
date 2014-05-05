@@ -103,13 +103,26 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
     
     // TODO: Support groupings if same place (http://stackoverflow.com/questions/2767164/objective-c-create-arrays-from-first-array-based-on-value)
     NSMutableArray * newRang = [[NSMutableArray alloc] init];
+    int printRang = 0;
+    int missedRang = 0;
     for(int i = 0; i < [orderedCouples count]; i++)
     {
+        float thisCouplePlace = [[orderedCouples objectAtIndex:i] getPlace];
+        if (i != 0 && thisCouplePlace == [[orderedCouples objectAtIndex:(i - 1)] getPlace])
+        {
+            float last = [[orderedCouples objectAtIndex:(i - 1)] getPlace];
+            NSLog(@"At least two have the same place");
+            missedRang++;
+        } else {
+            printRang += (missedRang + 1);
+            missedRang = 0;
+        }
+        
         [newRang addObject:
             [GRMustacheTemplate
                 renderObject:@{
                         @"name": [[orderedCouples objectAtIndex:i] name],
-                        @"place": [NSString stringWithFormat:@"%d", i + 1]}
+                        @"place": [NSString stringWithFormat:@"%d", printRang]}
              fromString:placingTemplateString
              error:NULL]];
     }
