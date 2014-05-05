@@ -29,6 +29,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
     {
         _couples = [[NSMutableArray alloc] init];
         _position = 0;
+        _ratingCount = 0;
         
     }
     return self;
@@ -61,6 +62,8 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
     [[self activeCouple] addRating:rating];
 
     _position++;
+    _ratingCount++;
+
     if(_position >= [self count])
     {
         _position = 0;
@@ -73,6 +76,8 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
     for (Couple  * couple in _couples) {
         [couple resetRating];
     }
+    _position = 0;
+    _ratingCount = 0;
 }
 
 - (NSInteger) coupleCount
@@ -82,8 +87,12 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (void) undoRating
 {
-    _position = (_position - 1) % [self count];
-    [[self activeCouple] dropLatestRating];
+    if(_ratingCount != 0)
+    {
+        _position = (_position - 1) % [self count];
+        [[self activeCouple] dropLatestRating];
+    }
+
 }
 
 
@@ -110,7 +119,6 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
         float thisCouplePlace = [[orderedCouples objectAtIndex:i] getPlace];
         if (i != 0 && thisCouplePlace == [[orderedCouples objectAtIndex:(i - 1)] getPlace])
         {
-            float last = [[orderedCouples objectAtIndex:(i - 1)] getPlace];
             NSLog(@"At least two have the same place");
             missedRang++;
         } else {
