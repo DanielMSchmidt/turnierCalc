@@ -20,12 +20,11 @@
 - (float)calculateRang
 {
     // TODO: Write tests for this!
-    // FIXME: An error is thrown here
     // Detect majority
-    for (int rating = 0; rating < 7; rating ++) {
+    for (int rating = 1; rating <= 7; rating ++) {
         int count = 0;
         for (int index = 0; index < ([_value length] - 1); index++) {
-            if ([[_value substringWithRange:NSMakeRange(index, index + 1)] intValue] == rating)
+            if ([[_value substringWithRange:NSMakeRange(index, 1)] intValue] == rating)
             {
                 count ++;
             }
