@@ -58,7 +58,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (void) addRating:(Rating *)rating
 {
-    [_couples[_position] addRating:rating];
+    [[self activeCouple] addRating:rating];
 
     _position++;
     if(_position >= [self count])
@@ -83,7 +83,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 - (void) undoRating
 {
     _position = (_position - 1) % [self count];
-    [_couples[_position] dropLatestRating];
+    [[self activeCouple] dropLatestRating];
 }
 
 
@@ -94,7 +94,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (Rating *) lastRating
 {
-    return[_couples[_position] getLatestRating];
+    return[[self activeCouple] getLatestRating];
 }
 
 - (void) updateRang
@@ -116,6 +116,11 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
     
     _couplesReadyToDisplay = newRang;
     
+}
+
+- (Couple *) activeCouple
+{
+    return _couples[_position];
 }
 
 @end

@@ -30,4 +30,5 @@ extern NSString * const placingTemplateString;
 - (Rating *) lastRating;
 - (NSArray *) getPlacedCouplesReadyToDisplay;
 - (void) updateRang;
+- (Couple *) activeCouple;
 @end

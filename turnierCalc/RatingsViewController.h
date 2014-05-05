@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *latestRatingLabel;
 extern NSString * const latestRatingPrefix;
 @property (weak, nonatomic) IBOutlet UITableView *resultTable;
+@property (weak, nonatomic) IBOutlet UILabel *currentCoupleLabel;
 
 @end

@@ -35,6 +35,7 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _ratingsTextField.delegate = self;
+    [self setCurrentCouple];
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,9 +76,16 @@ NSString * const latestRatingPrefix = @"Letzte Wertung: ";
 }
 
 - (void) resetInputs {
+    [self setCurrentCouple];
     [_resultTable reloadData];
     [_ratingsTextField setText:@""];
     [_ratingsTextField resignFirstResponder];
+}
+
+- (void) setCurrentCouple
+{
+    NSString * text = [[[CoupleList getInstance] activeCouple] name];
+    [_currentCoupleLabel setText:text];
 }
 
 - (IBAction)resetRatings:(id)sender {
