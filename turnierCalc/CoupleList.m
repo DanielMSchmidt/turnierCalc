@@ -66,7 +66,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
     {
         _lengthOfRatings = [rating length];
     }
-    else if (_lengthOfRatings != [rating length])
+    else if (_lengthOfRatings != [rating length] || [self activeCouple] == nil)
     {
         return NO;
     }
@@ -102,7 +102,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (void) undoRating
 {
-    if (_ratingCount != 0)
+    if (_ratingCount != 0 && [self activeCouple] != nil)
     {
         _position = (_position - 1) % [self count];
         [[self activeCouple] dropLatestRating];
@@ -118,7 +118,17 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (Rating *) lastRating
 {
-    return [[self activeCouple] getLatestRating];
+    Couple * c = [self activeCouple];
+
+    if (c == nil)
+    {
+        return nil;
+    }
+    else
+    {
+        return [c getLatestRating];
+    }
+
 }
 
 - (void) updateRang
@@ -159,6 +169,12 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (Couple *) activeCouple
 {
+    if ([_couples count] == 0)
+    {
+        NSLog(@"There are no couples yet");
+        return nil;
+    }
+
     return _couples[_position];
 }
 
