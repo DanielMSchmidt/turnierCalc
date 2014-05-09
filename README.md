@@ -9,3 +9,9 @@ Setup
 0. You have to install XCode 5 and the [CocoaPods gem](http://cocoapods.org/) 
 1. Run ``pod install`` to install all dependencies
 2. Run ``turnierCalc.xcworkspace`` to open the project
+
+
+Changelog
+--------
+
+0.1: Basics
