@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSMutableArray * couplesReadyToDisplay;
 @property (nonatomic) NSInteger position;
 @property (nonatomic) NSInteger ratingCount;
+@property (nonatomic) NSInteger lengthOfRatings;
 extern NSString * const placingTemplateString;
 
 + (CoupleList *) getInstance;
@@ -24,7 +25,7 @@ extern NSString * const placingTemplateString;
 - (NSInteger) count;
 - (Couple *) getCoupleAtIndex:(NSInteger)index;
 - (void) removeCoupleAtIndex:(NSInteger)index;
-- (void) addRating:(Rating *)rating;
+- (BOOL) addRating:(Rating *)rating;
 - (void) undoRating;
 - (void) resetRatings;
 - (NSInteger) coupleCount;
