@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RatingsViewController : UIViewController <UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITextField *ratingsTextField;
-@property (weak, nonatomic) IBOutlet UILabel *latestRatingLabel;
+@interface RatingsViewController : UIViewController <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITextField * ratingsTextField;
+@property (weak, nonatomic) IBOutlet UILabel * latestRatingLabel;
 extern NSString * const latestRatingPrefix;
-@property (weak, nonatomic) IBOutlet UITableView *resultTable;
-@property (weak, nonatomic) IBOutlet UILabel *currentCoupleLabel;
+@property (weak, nonatomic) IBOutlet UITableView * resultTable;
+@property (weak, nonatomic) IBOutlet UILabel * currentCoupleLabel;
 
+
+- (IBAction) resetRatings:(id)sender;
 @end

@@ -10,23 +10,26 @@
 
 @implementation Rating
 
-+ (Rating *)initWithValue:(NSString *)value
++ (Rating *) initWithValue:(NSString *)value
 {
     Rating * rating = [[Rating alloc] init];
+
     rating.value = value;
     return rating;
 }
 
-- (float)calculateRang
+- (float) calculateRang
 {
     // TODO: Write tests for this!
     // Detect majority
-    for (int rating = 1; rating <= 7; rating ++) {
+    for (int rating = 1; rating <= 7; rating++)
+    {
         int count = 0;
-        for (int index = 0; index < ([_value length] - 1); index++) {
+        for (int index = 0; index < ([_value length] - 1); index++)
+        {
             if ([[_value substringWithRange:NSMakeRange(index, 1)] intValue] == rating)
             {
-                count ++;
+                count++;
             }
         }
         if (count > ceil(([_value length] / 2)))
@@ -34,14 +37,20 @@
             return rating;
         }
     }
-    
+
     // No majority detected, let's use the average
     int points = 0;
-    for (int index = 0; index < [_value length]; index++) {
+    for (int index = 0; index < [_value length]; index++)
+    {
         points += [[_value substringWithRange:NSMakeRange(index, 1)] intValue];
     }
-    
+
     return (points / [_value length]);
+}
+
+- (int) length
+{
+    return (int) [_value length];
 }
 
 
