@@ -15,17 +15,18 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 + (CoupleList *) getInstance
 {
-    static CoupleList *sharedCoupleList = nil;
+    static CoupleList * sharedCoupleList = nil;
     static dispatch_once_t onceToken;
+
     dispatch_once(&onceToken, ^{
         sharedCoupleList = [[self alloc] init];
     });
     return sharedCoupleList;
 }
 
--(id) init
+- (id) init
 {
-    if(self = [super init])
+    if (self = [super init])
     {
         _couples = [[NSMutableArray alloc] init];
         _position = 0;
@@ -38,6 +39,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 - (void) addCouple:(Couple *)couple
 {
     [_couples insertObject:couple atIndex:[_couples count]];
+    [self resetRatings];
     [self updateRang];
 }
 
@@ -48,7 +50,8 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (Couple *) getCoupleAtIndex:(NSInteger)index
 {
-    Couple * couple =_couples[index];
+    Couple * couple = _couples[index];
+
     return couple;
 }
 
@@ -62,7 +65,9 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
     if (_lengthOfRatings == 0)
     {
         _lengthOfRatings = [rating length];
-    } else if (_lengthOfRatings != [rating length]) {
+    }
+    else if (_lengthOfRatings != [rating length])
+    {
         return NO;
     }
 
@@ -71,7 +76,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
     _position++;
     _ratingCount++;
 
-    if(_position >= [self count])
+    if (_position >= [self count])
     {
         _position = 0;
         [self updateRang];
@@ -81,7 +86,8 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (void) resetRatings
 {
-    for (Couple  * couple in _couples) {
+    for (Couple * couple in _couples)
+    {
         [couple resetRating];
     }
     _position = 0;
@@ -96,7 +102,7 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (void) undoRating
 {
-    if(_ratingCount != 0)
+    if (_ratingCount != 0)
     {
         _position = (_position - 1) % [self count];
         [[self activeCouple] dropLatestRating];
@@ -112,40 +118,43 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
 
 - (Rating *) lastRating
 {
-    return[[self activeCouple] getLatestRating];
+    return [[self activeCouple] getLatestRating];
 }
 
 - (void) updateRang
 {
     NSArray * orderedCouples = [_couples sortedArrayUsingSelector:@selector(compare:)];
-    
-    // TODO: Support groupings if same place (http://stackoverflow.com/questions/2767164/objective-c-create-arrays-from-first-array-based-on-value)
+
     NSMutableArray * newRang = [[NSMutableArray alloc] init];
     int printRang = 0;
     int missedRang = 0;
-    for(int i = 0; i < [orderedCouples count]; i++)
+
+    for (int i = 0; i < [orderedCouples count]; i++)
     {
         float thisCouplePlace = [[orderedCouples objectAtIndex:i] getPlace];
         if (i != 0 && thisCouplePlace == [[orderedCouples objectAtIndex:(i - 1)] getPlace])
         {
             NSLog(@"At least two have the same place");
             missedRang++;
-        } else {
+        }
+        else
+        {
             printRang += (missedRang + 1);
             missedRang = 0;
         }
-        
+
         [newRang addObject:
-            [GRMustacheTemplate
-                renderObject:@{
-                        @"name": [[orderedCouples objectAtIndex:i] name],
-                        @"place": [NSString stringWithFormat:@"%d", printRang]}
-             fromString:placingTemplateString
-             error:NULL]];
+         [GRMustacheTemplate
+          renderObject:@{
+                         @"name": [[orderedCouples objectAtIndex:i] name],
+                         @"place": [NSString stringWithFormat:@"%d", printRang]
+                         }
+          fromString:placingTemplateString
+          error:NULL]];
     }
-    
+
     _couplesReadyToDisplay = newRang;
-    
+
 }
 
 - (Couple *) activeCouple
