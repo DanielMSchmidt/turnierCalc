@@ -14,7 +14,7 @@
 @property (weak, nonatomic) NSString * name;
 @property (strong, nonatomic) NSMutableArray * ratings;
 
-+ (Couple *)initWithName:(NSString*)name;
++ (Couple *) initWithName:(NSString *)name;
 
 - (void) addRating:(Rating *)rating;
 - (float) getPlace;

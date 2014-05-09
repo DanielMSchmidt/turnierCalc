@@ -1,4 +1,4 @@
-    //
+//
 //  Couple.m
 //  turnierCalc
 //
@@ -11,9 +11,10 @@
 
 @implementation Couple
 
-+ (Couple *)initWithName:(NSString*)name
++ (Couple *) initWithName:(NSString *)name
 {
     Couple * couple = [[Couple alloc] init];
+
     couple.name = name;
     couple.ratings = [[NSMutableArray alloc] init];
     return couple;
@@ -24,17 +25,19 @@
     [_ratings addObject:rating];
 }
 
-- (float)getPlace
+- (float) getPlace
 {
     float placeSum = 0;
-    for (NSInteger currentId = 0; currentId < [_ratings count]; currentId++) {
+
+    for (NSInteger currentId = 0; currentId < [_ratings count]; currentId++)
+    {
         placeSum = placeSum + [_ratings[currentId] calculateRang];
     }
 
     float place;
     if ([_ratings count] > 0)
     {
-         place = placeSum / [_ratings count];
+        place = placeSum / [_ratings count];
     }
 
     NSLog(@"%f", place);

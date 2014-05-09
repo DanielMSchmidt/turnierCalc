@@ -62,6 +62,7 @@
 - (void) resetInputsOfRatingsVC
 {
     RatingsViewController * rvc = [self.tabBarController.viewControllers objectAtIndex:1];
+
     [rvc resetRatings:self];
 }
 
