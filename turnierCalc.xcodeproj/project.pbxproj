@@ -227,6 +227,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Daniel Schmidt";
 				TargetAttributes = {
+					E75B5FB91906B07400815FA1 = {
+						DevelopmentTeam = 346YS7A2D6;
+					};
 					E75B5FE01906B07400815FA1 = {
 						TestTargetID = E75B5FB91906B07400815FA1;
 					};
@@ -444,10 +447,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "turnierCalc/turnierCalc-Prefix.pch";
 				INFOPLIST_FILE = "turnierCalc/turnierCalc-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -458,10 +464,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "turnierCalc/turnierCalc-Prefix.pch";
 				INFOPLIST_FILE = "turnierCalc/turnierCalc-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
