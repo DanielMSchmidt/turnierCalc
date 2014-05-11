@@ -48,14 +48,25 @@
 
 - (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
+    if (alertView.alertViewStyle != UIAlertViewStylePlainTextInput)
+    {
+        return;
+    }
+
     NSString * name = [[alertView textFieldAtIndex:0] text];
-    Couple * couple = [Couple initWithName:name];
 
-    [_couples addCouple:couple];
+    if (![name isEqualToString:@""])
+    {
+        Couple * couple = [Couple initWithName:name];
+        [_couples addCouple:couple];
+        NSIndexPath * indexPath = [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    else
+    {
+        [[[UIAlertView alloc] initWithTitle:@"Fehler" message:@"Der Name des Paars muss aus mindestens einem Buchstaben bestehen" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    }
 
-    NSIndexPath * indexPath = [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
-
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [self resetInputsOfRatingsVC];
 }
 
