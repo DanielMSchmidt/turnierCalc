@@ -16,7 +16,6 @@
 		E75B5FCE1906B07400815FA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FCD1906B07400815FA1 /* AppDelegate.m */; };
 		E75B5FD11906B07400815FA1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FCF1906B07400815FA1 /* Main_iPhone.storyboard */; };
 		E75B5FD71906B07400815FA1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FD61906B07400815FA1 /* MasterViewController.m */; };
-		E75B5FDC1906B07400815FA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E75B5FDB1906B07400815FA1 /* Images.xcassets */; };
 		E75B5FE31906B07400815FA1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FE21906B07400815FA1 /* XCTest.framework */; };
 		E75B5FE41906B07400815FA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FBD1906B07400815FA1 /* Foundation.framework */; };
 		E75B5FE51906B07400815FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75B5FC11906B07400815FA1 /* UIKit.framework */; };
@@ -25,6 +24,7 @@
 		E75B5FFA1906C82D00815FA1 /* Couple.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B5FF91906C82D00815FA1 /* Couple.m */; };
 		E79E551019123B160046F07D /* Rating.m in Sources */ = {isa = PBXBuildFile; fileRef = E79E550F19123B160046F07D /* Rating.m */; };
 		E7C34F241906DB9300D98F14 /* RatingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C34F231906DB9300D98F14 /* RatingsViewController.m */; };
+		E7CC28F919252B0600A43612 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7CC28F819252B0600A43612 /* Images.xcassets */; };
 		E7D3EB4F1913F279009B6E3F /* CoupleList.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D3EB4E1913F279009B6E3F /* CoupleList.m */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +54,6 @@
 		E75B5FD01906B07400815FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		E75B5FD51906B07400815FA1 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		E75B5FD61906B07400815FA1 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		E75B5FDB1906B07400815FA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E75B5FE11906B07400815FA1 /* turnierCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = turnierCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75B5FE21906B07400815FA1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E75B5FEA1906B07400815FA1 /* turnierCalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "turnierCalcTests-Info.plist"; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		E79E550F19123B160046F07D /* Rating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rating.m; sourceTree = "<group>"; };
 		E7C34F221906DB9300D98F14 /* RatingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingsViewController.h; sourceTree = "<group>"; };
 		E7C34F231906DB9300D98F14 /* RatingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingsViewController.m; sourceTree = "<group>"; };
+		E7CC28F819252B0600A43612 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E7D3EB4D1913F279009B6E3F /* CoupleList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoupleList.h; sourceTree = "<group>"; };
 		E7D3EB4E1913F279009B6E3F /* CoupleList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoupleList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,12 +130,12 @@
 		E75B5FC31906B07400815FA1 /* turnierCalc */ = {
 			isa = PBXGroup;
 			children = (
+				E7CC28F819252B0600A43612 /* Images.xcassets */,
 				E75B5FCC1906B07400815FA1 /* AppDelegate.h */,
 				E75B5FCD1906B07400815FA1 /* AppDelegate.m */,
 				E75B5FCF1906B07400815FA1 /* Main_iPhone.storyboard */,
 				E75B5FD51906B07400815FA1 /* MasterViewController.h */,
 				E75B5FD61906B07400815FA1 /* MasterViewController.m */,
-				E75B5FDB1906B07400815FA1 /* Images.xcassets */,
 				E75B5FC41906B07400815FA1 /* Supporting Files */,
 				E75B5FF81906C82D00815FA1 /* Couple.h */,
 				E75B5FF91906C82D00815FA1 /* Couple.m */,
@@ -259,7 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E75B5FDC1906B07400815FA1 /* Images.xcassets in Resources */,
+				E7CC28F919252B0600A43612 /* Images.xcassets in Resources */,
 				E75B5FD11906B07400815FA1 /* Main_iPhone.storyboard in Resources */,
 				E75B5FC81906B07400815FA1 /* InfoPlist.strings in Resources */,
 			);
