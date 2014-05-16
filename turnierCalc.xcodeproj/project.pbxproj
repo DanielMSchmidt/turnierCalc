@@ -227,9 +227,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Daniel Schmidt";
 				TargetAttributes = {
-					E75B5FB91906B07400815FA1 = {
-						DevelopmentTeam = 346YS7A2D6;
-					};
 					E75B5FE01906B07400815FA1 = {
 						TestTargetID = E75B5FB91906B07400815FA1;
 					};
