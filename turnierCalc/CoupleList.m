@@ -11,7 +11,7 @@
 
 @implementation CoupleList
 
-NSString * const placingTemplateString = @"{{place}}. - {{name}}";
+NSString * const placingTemplateString = @"{{place}}. - {{name}} - rechnerisch {{calculatedPlace}}";
 
 + (CoupleList *) getInstance
 {
@@ -157,7 +157,8 @@ NSString * const placingTemplateString = @"{{place}}. - {{name}}";
          [GRMustacheTemplate
           renderObject:@{
                          @"name": [[orderedCouples objectAtIndex:i] name],
-                         @"place": [NSString stringWithFormat:@"%d", printRang]
+                         @"place": [NSString stringWithFormat:@"%d", printRang],
+                         @"calculatedPlace": [NSString stringWithFormat:@"%.2f", [[orderedCouples objectAtIndex:i] getPlace]]
                          }
           fromString:placingTemplateString
           error:NULL]];
